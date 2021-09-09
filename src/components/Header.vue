@@ -31,7 +31,7 @@
   background-color: #fff;
 }
 
-.row {
+.navbar .row {
   display: flex;
   justify-content: space-around;
   align-items: center;

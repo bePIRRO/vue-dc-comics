@@ -8,9 +8,11 @@
     <!-- cards container -->
     <div class="container">
       <div class="row">
-        <div class="card" v-for="(serie, index) in cards" :key="index">
-          <img :src="serie.thumb" :alt="serie.series" />
-          <h5>{{ serie.series }}</h5>
+        <div class="col">
+          <div class="card" v-for="(serie, index) in cards" :key="index">
+            <img :src="serie.thumb" :alt="serie.series" />
+            <h5>{{ serie.series }}</h5>
+          </div>
         </div>
       </div>
     </div>
@@ -20,23 +22,25 @@
 <style>
 main {
   background-color: #1c1c1c;
-  height: 800px;
   margin: 0;
-  justify-content: center;
 }
 
 .container {
-  margin: 0;
-  max-width: 1500px;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.container .row {
-  margin-top: 100px;
+main .row {
+  margin-top: 50px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.container .col {
+  justify-content: center;
+  padding: 20px;
+  width: 1500px;
 }
 
 .tag {
@@ -53,6 +57,7 @@ main {
   color: #fff;
   margin: 20px;
   max-width: 200px;
+  min-height: 250px;
 }
 
 .card img {
